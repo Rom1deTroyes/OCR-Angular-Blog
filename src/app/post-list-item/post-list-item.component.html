@@ -1,3 +1,6 @@
-<p>
-  post-list-item works!
-</p>
+<li [ngClass]="{'list-group-item': true,
+  }">
+  <span class="h2">{{ postTitle | titlecase }}</span>
+  <span class="pull-right">{{ postDate | date: 'd MMM y - HH:mm' }}</span>
+  <div>{{ postContent }}</div>
+</li>
