@@ -1,3 +1,15 @@
-<p>
-  post-list works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="list-group">
+        <app-post-list-item
+          *ngFor="let p of posts"
+            [postTitle]="p.title"
+            [postContent]="p.content"
+            [postLoveIts]="p.loveIts"
+            [postDate]="p.created_at"
+          ></app-post-list-item>
+      </ul>
+    </div>
+  </div>
+</div>
